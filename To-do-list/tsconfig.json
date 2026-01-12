@@ -9,7 +9,7 @@
 
     /* Dòng này sẽ SỬA LỖI của bạn */
     "esModuleInterop": true /* Cho phép import module CJS (như Express) kiểu mặc định */,
-
+    "resolveJsonModule": true, /* Kiểu mặc định cho file JSON (như package.json) */
     /* Các cấu hình kiểm tra lỗi */
     "strict": true /* Bật chế độ kiểm tra nghiêm ngặt */,
     "skipLibCheck": true /* Bỏ qua check lỗi trong file thư viện (để đỡ báo lỗi rác) */,
