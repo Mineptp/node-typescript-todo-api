@@ -27,9 +27,9 @@ export const getById = (id: number): Todo | null => {
 }
 export const createId = (title: string, description: string): Todo => {
   const lastTodo = todos[todos.length - 1];
-  const newId = todos.length > 0 ? lastTodo ? (lastTodo.id + 1 : 1);
+  const newId = todos.length > 0 ? Math.max(...todos.map(t => t.id)) + 1 : 1;
   const newTodo: Todo = {
-    id ?: newId,
+    id : newId,
     title: title,
     description: description,
     completed: false,
@@ -38,10 +38,10 @@ export const createId = (title: string, description: string): Todo => {
   return newTodo;
 };
 
-export const update = (id : number, data: Partial<Todo>) => {
+export const update = (id : number, data: Partial<Omit<Todo , 'id'>>) => {
   const index = todos.findIndex((t) => t.id === id);
   if (index !== -1) {
-    todos[index] = { ...todos[index], ...data };
+    todos[index] = { ...todos[index], ...data } as Todo;
     return todos[index];
   }
   return null;

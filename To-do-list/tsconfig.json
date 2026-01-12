@@ -1,45 +1,20 @@
 {
-  // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
-    // File Layout
-    // "rootDir": "./src",
-    // "outDir": "./dist",
+    /* Cấu hình cơ bản */
+    "target": "ES2020" /* Phiên bản JS đích */,
+    "module": "NodeNext" /* Chuẩn module (quan trọng cho Node mới) */,
+    "moduleResolution": "NodeNext" /* Cách tìm file (quan trọng) */,
+    "outDir": "./dist" /* Thư mục chứa file sau khi build */,
+    "rootDir": "./src" /* Thư mục chứa code nguồn */,
 
-    // Environment Settings
-    // See also https://aka.ms/tsconfig/module
-    
-    "module": "esnext",
-    "target": "ES2020",
-    "types": [],
-    // For nodejs:
-    // "lib": ["esnext"],
-    // "types": ["node"],
-    // and npm install -D @types/node
+    /* Dòng này sẽ SỬA LỖI của bạn */
+    "esModuleInterop": true /* Cho phép import module CJS (như Express) kiểu mặc định */,
 
-    // Other Outputs
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
-
-    // Stricter Typechecking Options
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
-
-    // Style Options
-    // "noImplicitReturns": true,
-    // "noImplicitOverride": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
-    // "noFallthroughCasesInSwitch": true,
-    // "noPropertyAccessFromIndexSignature": true,
-
-    // Recommended Options
-    "strict": true,
-    "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
-    "isolatedModules": true,
-    "noUncheckedSideEffectImports": true,
-    "moduleDetection": "force",
-    "skipLibCheck": true
-  }
+    /* Các cấu hình kiểm tra lỗi */
+    "strict": true /* Bật chế độ kiểm tra nghiêm ngặt */,
+    "skipLibCheck": true /* Bỏ qua check lỗi trong file thư viện (để đỡ báo lỗi rác) */,
+    "forceConsistentCasingInFileNames": true /* Bắt buộc viết đúng hoa thường tên file */
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }
