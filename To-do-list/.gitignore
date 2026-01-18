@@ -1,11 +1,11 @@
-# 1. Dependencies (Thư viện tải về - Rất nặng, không commit)
+# 1. Dependencies 
 node_modules/
 
-# 2. Build Output (Code JS đã biên dịch từ TS - Máy khác tự build lại được)
+# 2. Build Output 
 dist/
 build/
 
-# 3. Environment Variables (BẢO MẬT - Tuyệt đối không commit file chứa mật khẩu)
+# 3. Environment Variables 
 .env
 .env.local
 .env.development.local
@@ -13,18 +13,18 @@ build/
 .env.production.local
 serviceAccountKey.json
 
-# 4. Logs (File nhật ký lỗi)
+# 4. Logs 
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 logs/
 *.log
 
-# 5. OS & IDE System Files (File rác của hệ điều hành và VS Code)
+# 5. OS & IDE System Files 
 .DS_Store
 Thumbs.db
 .vscode/
 .idea/
 
-# 6. Testing (Sau này nếu có test)
+# 6. Testing 
 coverage/

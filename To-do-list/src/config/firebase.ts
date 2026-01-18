@@ -1,5 +1,5 @@
 import admin from "firebase-admin";
-import { createRequire } from "module"; // 1. Import hàm tạo require
+import { createRequire } from "module"; 
 
 const require = createRequire(import.meta.url);
 const serviceAccount = require("../../serviceAccountKey.json");
