@@ -1,8 +1,6 @@
 import axiosClient from './instance';
 
 const todoApi = {
-/*************  ✨ Windsurf Command ⭐  *************/
-/*******  e0ad47a6-c680-4ac8-8107-67424bb2eff9  *******/
     getAll(params)  {
         const url = '/todos';
         return axiosClient.get(url, { params }); // (url, config)

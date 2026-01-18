@@ -1,5 +1,6 @@
 # 1. Dependencies 
 node_modules/
+.prettierrc
 
 # 2. Build Output 
 dist/
